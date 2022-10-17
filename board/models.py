@@ -24,8 +24,8 @@ class Profile(models.Model):
     time_received = models.DateTimeField()
     start_pos_lat = models.DecimalField(max_digits=8, decimal_places=5)
     start_pos_long = models.DecimalField(max_digits=8, decimal_places=5)
-    end_pos_lat = models.DecimalField(max_digits=8, decimal_places=5)
-    end_pos_long = models.DecimalField(max_digits=8, decimal_places=5)
+    end_pos_lat = models.DecimalField(max_digits=8, decimal_places=5, blank=True, null=True)
+    end_pos_long = models.DecimalField(max_digits=8, decimal_places=5, blank=True, null=True)
     key = models.CharField(max_length=10)
     surveyor = models.ForeignKey('Surveyor', models.DO_NOTHING)
 
